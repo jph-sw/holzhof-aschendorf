@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: "Pasadena Serial Medium Regular";
+    font-style: normal;
+    font-weight: 200 700;
+    font-display: swap;
+    src: url("/Pasadena-Serial-Medium Regular.ttf") format("truetype");
+}
+
+@theme {
+    --font-pasadena: "Pasadena Serial Medium Regular", sans-serif;
+}

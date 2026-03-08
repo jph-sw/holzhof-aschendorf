@@ -1,0 +1,64 @@
+---
+import { Image } from "astro:assets";
+import "../styles/global.css";
+import "@phosphor-icons/web/regular";
+import HolzhofLogo from "../assets/holzhof-logo.png";
+import Footer from "../components/footer.astro";
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="icon" href="/favicon.ico" />
+        <meta name="generator" content={Astro.generator} />
+        <title>Astro Basics</title>
+    </head>
+    <body class="min-h-screen flex flex-col relative">
+        <div
+            class="w-full h-16 fixed z-10 bg-white backdrop-blur-lg justify-between flex items-center px-4 md:px-56"
+        >
+            <div class="flex items-center">
+                <a href="/" class="min-h-11.25 w-30 flex object-cover">
+                    <Image src={HolzhofLogo} alt={""} />
+                </a>
+                <nav>
+                    <ul class="flex gap-8 ml-12">
+                        <li class="hidden md:block">
+                            <a
+                                href="/#dienstleistungen"
+                                class="text-gray-700 hover:text-gray-900"
+                                >Leistungen</a
+                            >
+                        </li>
+                        <li class="hidden md:block">
+                            <a
+                                href="/"
+                                class="text-gray-700 hover:text-gray-900"
+                                >Verkauf</a
+                            >
+                        </li>
+                        <li class="hidden md:block">
+                            <a
+                                href="/contact"
+                                class="text-gray-700 hover:text-gray-900"
+                                >Kontakt</a
+                            >
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <a
+                href="tel:+49123456789"
+                class="bg-[#f39200] text-white flex items-center gap-2 p-2 rounded cursor-pointer hover:bg-[#f39200]/90 transition-colors duration-300"
+                ><span class="ph ph-phone white text-xl"></span>Anrufen</a
+            >
+        </div>
+        <main class="flex-1 w-full flex flex-col">
+            <slot />
+        </main>
+        <Footer />
+    </body>
+</html>

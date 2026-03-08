@@ -1,0 +1,119 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Section from "../../components/section.astro";
+
+import BucheImage from "../../assets/buche.jpg";
+import { Image } from "astro:assets";
+import Carousel from "../../components/image-carousel.astro";
+---
+
+<Layout>
+    <Section>
+        <div class="pt-24 px-4 md:px-56">
+            <div class="grid lg:grid-cols-2 gap-12 mt-8">
+                <div class="flex flex-col gap-4">
+                    <h1
+                        class="text-5xl border-s-5 border-[#f39200] px-4 font-pasadena"
+                    >
+                        Brennholz
+                    </h1>
+                    <p>
+                        Wir bieten ofenfertiges kammergetrocknetes Kaminholz
+                        Buche oder Mischholz, sowie Stammholz in bester Qualität
+                        an. Das Kaminholz ist gespalten und hat eine Scheitlänge
+                        von 25 cm, eignet sich somit für jeden Kamin oder Ofen.
+                    </p>
+                    <p>
+                        Unser Mischholz und das Stammholz besteht aus Bäumen des
+                        heimischen Bestandes, enthält jedoch KEIN Nadelholz und
+                        KEINE Pappel. Gerne können Sie auch kleinere Mengen
+                        Stammholz bei uns auf dem Hof selbst schneiden.
+                    </p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th class="text-left">Produkt</th>
+                                <th class="text-left">Einheit</th>
+                                <th class="text-left">Preis</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Kammergetrocknetes Kaminholz Buche</td>
+                                <td>SRM</td>
+                                <td>145 Euro</td>
+                            </tr>
+                            <tr>
+                                <td>Kammergetrocknetes Kaminholz Mischholz</td>
+                                <td>SRM</td>
+                                <td>derzeit nicht verfügbar</td>
+                            </tr>
+                            <tr>
+                                <td>Stammholz (feucht)</td>
+                                <td>RM</td>
+                                <td>derzeit nicht verfügbar</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="w-full flex justify-center">
+                    <Image
+                        src={BucheImage}
+                        alt={"Buche"}
+                        class={"rounded-xl overflow-hidden w-full h-full object-cover max-w-[800px] "}
+                    />
+                </div>
+            </div>
+        </div>
+    </Section>
+    <Section>
+        <div class="pt-24 px-4 md:px-56">
+            <div class="grid lg:grid-cols-2 gap-12 mt-8">
+                <div class="flex flex-col gap-4">
+                    <h1
+                        class="text-5xl border-s-5 border-[#f39200] px-4 font-pasadena"
+                    >
+                        Beetabdeckungen
+                    </h1>
+                    <p>
+                        Wir haben stets Rindenmulch und Hackschnitzel für Sie
+                        auf Lager.
+                    </p>
+                    <p>Unsere Produkte sind:</p>
+                    <ul class="list-disc list-inside">
+                        <li>langlebig und dekorativ</li>
+                        <li>schützen vor Unkraut</li>
+                        <li>
+                            speichern Feuchtigkeit und bieten dadurch Schutz vor
+                            Austrocknung und Erosion
+                        </li>
+                    </ul>
+                    <span class="font-semibold">Preis je cbm inkl. MwSt:</span>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th class="text-left">Produkt</th>
+                                <th class="text-left">Preis</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Rindenmulch</td>
+                                <td>45 Euro</td>
+                            </tr>
+                            <tr>
+                                <td>Waldhackschnitzel</td>
+                                <td>28 Euro</td>
+                            </tr>
+                            <tr>
+                                <td>Sägewerkhackschnitzel</td>
+                                <td>41 Euro</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <Carousel />
+            </div>
+        </div>
+    </Section>
+</Layout>

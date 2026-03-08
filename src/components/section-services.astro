@@ -1,0 +1,21 @@
+---
+import { Image } from "astro:assets";
+
+import BaumImage from "../assets/baum2.png";
+import RindenmulchImage from "../assets/rindenmulch.jpg";
+import MulcherImage from "../assets/mulcher.jpg";
+import Section from "./section.astro";
+
+import ServiceCard from "./services/service-card.astro";
+---
+
+<Section id="dienstleistungen">
+    <h2 class="text-5xl border-s-5 border-[#f39200] px-4 font-pasadena mb-8">
+        Dienstleistungen
+    </h2>
+    <div class="flex-col lg:flex-row flex justify-start gap-8 lg:gap-24">
+        <ServiceCard title="Baumpflege" image={BaumImage} />
+        <ServiceCard title="Kommunaldienst" image={MulcherImage} />
+        <ServiceCard title="Verkauf" image={RindenmulchImage} />
+    </div>
+</Section>

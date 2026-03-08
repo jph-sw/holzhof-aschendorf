@@ -1,0 +1,20 @@
+---
+import { Image } from "astro:assets";
+import HeroImage from "../assets/holzscheibe.png";
+import Section from "../components/section.astro";
+---
+
+<Section id="hero">
+    <div
+        class="relative w-full h-100 md:h-250 rounded-xl overflow-hidden shadow-xl"
+    >
+        <div class={"absolute w-full h-full"}>
+            <Image
+                src={HeroImage}
+                alt={"Holzhof Aschendorf"}
+                class="w-full h-full object-cover"
+                priority
+            />
+        </div>
+    </div>
+</Section>
