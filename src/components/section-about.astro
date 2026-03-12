@@ -2,25 +2,21 @@
 import { Image } from "astro:assets";
 import BaumImage from "../assets/baum.png";
 import Section from "../components/section.astro";
+import { useTranslate } from "../i18n";
+
+const { t } = await useTranslate("about", Astro.currentLocale);
 ---
 
 <Section id="about">
     <h1 class="text-5xl border-s-5 border-[#f39200] px-4 font-pasadena">
-        Holzhof Aschendorf
+        {t("title")}
     </h1>
     <div class="grid xl:grid-cols-2 gap-12 mt-8">
         <div class="flex flex-col gap-6">
             <div class="flex flex-col gap-2">
-                <h2 class="font-pasadena text-2xl">Über uns</h2>
+                <h2 class="font-pasadena text-2xl">{t("sub-title")}</h2>
                 <p class="text-xl">
-                    Am 01.12.2013 wurde der Holzhof Aschendorf von Stefan Eiken
-                    gegründet und hat sich seitdem zu einem etablierten
-                    Unternehmen rund um das Thema Baum entwickelt. Sei es die
-                    Baumpflege oder Baumfällungen, Wurzelfräsen oder aber die
-                    Entfernung des Eichenprozessionsspinners, wir sind für Sie
-                    und Euch da. Aber auch der Kaminholzverkauf, aus welchem
-                    heraus der Holzhof Aschendorf entstanden ist, zählt
-                    weiterhin zu einem wichtigen Standbein unseres Unternehmens.
+                    {t("text.1")}
                 </p>
                 <p class="text-xl">
                     Seit dem Jahr 2024 haben wir unser Angebotsportfolio um die

@@ -5,7 +5,8 @@
     font-style: normal;
     font-weight: 200 700;
     font-display: swap;
-    src: url("/Pasadena-Serial-Medium Regular.ttf") format("truetype");
+    src: url("/holzhof-aschendorf/Pasadena-Serial-Medium Regular.ttf")
+        format("truetype");
 }
 
 @theme {

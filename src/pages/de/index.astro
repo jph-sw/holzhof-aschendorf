@@ -1,0 +1,17 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import ServicesSection from "../../components/section-services.astro";
+import AboutSection from "../../components/section-about.astro";
+import HeroSection from "../../components/section-hero.astro";
+import { useTranslate } from "../../i18n";
+
+const { t } = await useTranslate("hero", Astro.currentLocale);
+---
+
+<Layout>
+    <main class={"relative min-h-screen w-screen px-4 md:px-56 pt-24"}>
+        <HeroSection />
+        <ServicesSection />
+        <AboutSection />
+    </main>
+</Layout>
